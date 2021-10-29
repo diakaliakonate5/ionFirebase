@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-title style="text-align: center;">Page de connexion</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" >
+  <ion-card style="background-color: rgb(253, 243, 243);">
+    <ion-card-header>
+      
+    </ion-card-header>
+      <ion-card-content>
+        <ion-avatar class="ion-avatar">
+          <img src="https://cdn2.iconfinder.com/data/icons/audio-16/96/user_avatar_profile_login_button_account_member-512.png">
+        </ion-avatar>
+        <ion-list>
+          <ion-item >
+            <ion-label position="floating">Email</ion-label>
+            <ion-input [(ngModel)]="email" type="text"></ion-input>
+          </ion-item>
+         
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+              <ion-input [(ngModel)]="password" type="password"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+      <ion-button expand="block" shape="round" color="primary" (click)="login()">Connexion</ion-button>
+  </ion-card>
+  <div style="padding:20px ;text-align:center">
+    <a (click)="forgot()">Mot de Passe Oublié?</a>
+    <br>
+    <p>Vous n'avez pas de compte? <a (click)="register()">Inscrivez-vous</a> </p>
+  </div>
+  </ion-content>
+  

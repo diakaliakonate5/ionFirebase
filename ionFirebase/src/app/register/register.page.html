@@ -1,0 +1,47 @@
+
+<ion-header   translucent>
+  <ion-toolbar>
+    <ion-buttons  slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;"> page d'inscription</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      
+    </ion-card-header>
+      <ion-card-content>
+
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Nom</ion-label>
+           <ion-input [(ngModel)]="name" type="text" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating"  >Prenom</ion-label>
+           <ion-input [(ngModel)]="prenom" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input [(ngModel)]="email" type="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Telephone</ion-label>
+           <ion-input [(ngModel)]="phone" type="number"></ion-input>
+          </ion-item>
+         
+          <ion-item>
+            <ion-label  position="floating">Pass</ion-label>
+              <ion-input [(ngModel)]="password" type="password" (ionchange)="checkPassword()"></ion-input>
+          </ion-item>
+          
+        </ion-list>
+      </ion-card-content>
+      <ion-button  expand="block" shape="round" color="primary" (click)="register()">Inscrire</ion-button>
+  </ion-card>
+  
+  </ion-content>
+  

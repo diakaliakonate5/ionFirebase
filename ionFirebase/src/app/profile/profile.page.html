@@ -1,0 +1,31 @@
+
+<ion-header   translucent>
+  <ion-toolbar>
+    <ion-buttons style="background-color:  rgb(243, 213, 191);" slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;background-color: rgb(243, 213, 191); "><strong>{{ name }} {{ prenom }}</strong> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+       
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-label> <strong><ion-icon name="call-outline"></ion-icon>{{ phone }}</strong> </ion-label><br>
+        <ion-label><ion-icon name="mail-unread-outline"></ion-icon> <strong>{{ email }}</strong> </ion-label><br> <br>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ <ion-button routerLink="/login">Deconnexion</ion-button>
+ 
+
+</ion-content>

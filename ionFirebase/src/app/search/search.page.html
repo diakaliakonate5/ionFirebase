@@ -1,0 +1,25 @@
+<ion-header   translucent>
+    <ion-toolbar>
+      <ion-buttons  slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title > Rechercher</ion-title>
+      
+    </ion-toolbar>
+  </ion-header>  
+<ion-content>    
+      <ion-searchbar placeholder="entrer un terme a chercher" [(ngModel)]="filterTerm" animated="true">
+
+      </ion-searchbar>   
+     <ion-list>       
+       <ion-item *ngFor="let user of userListe | filter:filterTerm">        
+     <ion-avatar slot="start">      
+  </ion-avatar>     
+<ion-label>        
+    <h2>{{user.name}} {{user.prenom}}</h2>      
+                                          
+     <p>{{user.email}}</p>      
+</ion-label>    
+ </ion-item>        
+ </ion-list>   
+</ion-content>                                            
